@@ -12,7 +12,6 @@ public class ObiectDAO{
 		Connection con = Conexiune.con();
 		Statement stmt = null;
 		ResultSet rs = null;
-		obiecte = new ArrayList<>();
 		try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery("select * from obiect");
