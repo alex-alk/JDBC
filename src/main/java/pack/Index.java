@@ -12,12 +12,10 @@ public class Index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("aaaaaaaa");
 		request.setAttribute("obiectDAO", new ObiectDAO());
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 	}
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 		String id = request.getParameter("id");
 		if(id!=null) {
 			ObiectDAO.deleteObiect(id);
