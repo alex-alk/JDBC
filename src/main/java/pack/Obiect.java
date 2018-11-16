@@ -1,4 +1,4 @@
-package bean;
+package pack;
 
 public class Obiect {
 	private int id;

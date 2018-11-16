@@ -1,4 +1,4 @@
-package bean;
+package pack;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,7 +23,7 @@ public class ObiectDAO{
 				obi.setNumber(rs.getInt("number"));
 				obiecte.add(obi);
 			}
-		}catch(SQLException se) {System.out.println("err");}
+		}catch(SQLException se) {}
 		finally {
 			try {
 				rs.close();
@@ -33,7 +33,7 @@ public class ObiectDAO{
 		}
 		return obiecte;
 	}
-	public  void deleteObiect(int id) {
+	public static void deleteObiect(String id) {
 		Connection con = Conexiune.con();
 		Statement stmt = null;
 		try {

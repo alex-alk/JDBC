@@ -8,10 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:useBean id="obiectDAO" class="bean.ObiectDAO"></jsp:useBean>
-	<c:if test="${\"POST\".equalsIgnoreCase(pageContext.request.method)}">
-			${obiectDAO.deleteObiect(param["id"])}
-	</c:if>
 	<table>
 		<tr>
 			<th>Nr ordin</th>
